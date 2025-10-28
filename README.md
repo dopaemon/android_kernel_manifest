@@ -1,4 +1,16 @@
 ```bash
+docker pull dopaemon/jammy:latest
+```
+```bash
+mkdir -p $HOME/Rebase
+```
+```bash
+chmod -R 777 $HOME/Rebase
+```
+```bash
+docker run -itd $HOME/Rebase:Rebase dopaemon/jammy:latest
+```
+```bash
 repo init -u https://github.com/dopaemon/android_kernel_manifest.git -b sm8450
 ```
 ```bash
