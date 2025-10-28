@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Remote -->
+    <remote fetch="https://github.com"
+            name="github" />
+
+    <remote fetch="https://codeberg.org"
+            name="codeberg" />
+
+    <remote fetch="https://android.googlesource.com"
+            name="aosp" />
+
+    <!-- Kernel Xiaomi SM8450 -->
+    <project sync-s="true"
+             name="dopaemon/android_kernel_xiaomi_common"
+             path="sm8450"
+             remote="github"
+             revision="Rebase" />
+
+    <project sync-s="true"
+             name="dopaemon/android_kernel_xiaomi_sm8450-devicetrees"
+             path="sm8450-devicetrees"
+             remote="github"
+             revision="lineage-23.0" />
+
+    <project sync-s="true"
+             name="LineageOS/android_kernel_xiaomi_sm8450-modules"
+             path="sm8450-modules"
+             remote="github"
+             revision="lineage-23.0" />
+
+    <!-- Inline kernel build -->
+    <project path="prebuilts/clang/kernel/linux-x86/clang-r416183b"
+             name="LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b"
+             remote="github"
+             clone-depth="1"
+             revision="lineage-20.0" />
+
+    <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
+             name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9"
+             remote="github"
+             groups="pdk,linux,arm"
+             clone-depth="1"
+             revision="lineage-19.1" />
+
+    <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"
+             name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" 
+             remote="github"
+             groups="pdk,linux,arm"
+             clone-depth="1"
+             revision="lineage-19.1" />
+
+    <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"
+             name="LineageOS/android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9"
+             remote="github"
+             groups="pdk,linux,x86"
+             clone-depth="1"
+             revision="lineage-19.1" />
+
+    <project path="prebuilts/kernel-build-tools"
+             name="dopaemon/android_kernel_xiaomi_common"
+             remote="github"
+             revision="build-tools" />
+
+    <project path="build"
+             name="dopaemon/android_kernel_xiaomi_common"
+             remote="github"
+             revision="build">
+
+      <linkfile src="build_sm8450.sh" dest="sm8450/build.sh" />
+    </project>
+
+    <project path="prebuilts/tools-lineage"
+             name="LineageOS/android_prebuilts_tools-lineage"
+             remote="github"
+             clone-depth="1" />
+
+</manifest>
