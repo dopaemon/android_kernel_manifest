@@ -73,6 +73,7 @@
     <project path="prebuilts/tools-lineage"
              name="LineageOS/android_prebuilts_tools-lineage"
              remote="github"
-             clone-depth="1" />
+             clone-depth="1"
+             revision="lineage-23.0" />
 
 </manifest>
