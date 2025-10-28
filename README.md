@@ -8,7 +8,7 @@ mkdir -p $HOME/Rebase
 chmod -R 777 $HOME/Rebase
 ```
 ```bash
-docker run -itd $HOME/Rebase:Rebase dopaemon/jammy:latest
+docker run -itd -v $HOME/Rebase:/home/dora/Rebase dopaemon/jammy:latest
 ```
 ```bash
 repo init -u https://github.com/dopaemon/android_kernel_manifest.git -b sm8450
